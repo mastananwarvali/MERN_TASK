@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+       body {
+            display: flex;
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .vertical-nav {
+            width: 200px;
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            left: 25%;
+            top: 20%;
+        }
+        .vertical-nav a {
+            display: flex;
+            padding: 10px;
+            text-decoration: none;
+            color: #fff;
+        }
+        .vertical-nav .home { background-color: #FFA500; } 
+        .vertical-nav .java { background-color: #87CEEB; } 
+        .vertical-nav .css { background-color: #87CEEB; } 
+        .vertical-nav .html { background-color: #87CEEB; } 
+        .vertical-nav .bootstrap { background-color: #87CEEB; } 
+
+        .content {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        .horizontal-nav {
+            display: flex;
+            justify-content: center;
+            background-color: #808080; /* Grey */
+            position: absolute;
+            right: 30%;
+            top: 30%;
+        }
+        .horizontal-nav a {
+            padding: 10px;
+            text-decoration: none;
+            color: #fff;
+        }
+        .main-content {
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+    </style>
+</head>
+<body>
+    <div class="vertical-nav">
+        <a href="#" class="home">Home</a>
+        <a href="#" class="java">Java</a>
+        <a href="#" class="css">CSS</a>
+        <a href="#" class="html">HTML</a>
+        <a href="#" class="bootstrap">Bootstrap</a>
+    </div>
+
+    <div class="horizontal-nav">
+        <a href="#" class="home">Home</a>
+        <a href="#" class="java">Java</a>
+        <a href="#" class="html">HTML</a>
+        <a href="#" class="css">CSS</a>
+    </div>
+</body>
+</html>

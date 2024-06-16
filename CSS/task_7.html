@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #8B243C;
+}
+
+.container {
+  border: 3px solid #7B1336;
+  background-color: #7B1336;
+  width: 500px;
+  padding: 20px;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  color: white;
+  width: 120px; /* Adjust the width of the label */
+}
+
+.form-group input, .form-group select, .form-group textarea {
+  width: calc(100% - 120px); /* Adjust the width of the input based on the label width */
+  padding: 8px;
+  margin-left: 10px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+textarea {
+  height: 50px; /* Adjust the height as needed */
+}
+
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.radio-group {
+  display: flex;
+  align-items: center;
+}
+
+.radio-group label {
+  margin-right: 10px;
+}
+
+.radio-group input {
+  margin-left: 10px;
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+  <form action="/action_page.php" method="post">
+    <div class="form-group">
+      <label for="name"><b>Name:</b></label>
+      <input type="text" placeholder="your name" name="name" required>
+    </div>
+
+    <div class="form-group">
+      <label for="email"><b>Email:</b></label>
+      <input type="text" placeholder="your email" name="email" required>
+    </div>
+
+    <div class="form-group">
+      <label for="psw"><b>Password:</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+    </div>
+
+    <div class="form-group">
+      <label for="phone"><b>Phone Number:</b></label>
+      <input type="number" placeholder="Enter Phone Number" name="phone" required>
+    </div>
+
+    <div class="form-group">
+      <label for="gender"><b>Gender:</b></label>
+      <div class="radio-group">
+        <label>Male:</label>
+        <input type="radio" name="gender" value="male">
+        <label>Female:</label>
+        <input type="radio" name="gender" value="female">
+        <label>Other:</label>
+        <input type="radio" name="gender" value="other">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="language"><b>Language:</b></label>
+      <select name="language">
+        <option value="english">Select Language</option>
+        <option value="english">English</option>
+        <option value="spanish">Spanish</option>
+        <option value="french">French</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="zipcode"><b>Zip Code:</b></label>
+      <input type="text" placeholder="Enter Zip Code" name="zipcode" required>
+    </div>
+
+    <div class="form-group">
+      <label for="about"><b>About:</b></label>
+      <textarea name="about" placeholder="Write about yourself..." required></textarea>
+    </div>
+
+    <button type="submit">Register</button>
+  </form>
+</div>
+
+</body>
+</html>
